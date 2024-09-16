@@ -11,6 +11,7 @@ const Home = () => {
 
   return (
     <div>
+      
       <div className="relative mx-auto w-full">
         <nav className="absolute top-1 left-0 w-full bg-transparent flex items-center p-4 z-50">
           <div className="flex-shrink-0 ml-4 sm:ml-10">
@@ -162,32 +163,6 @@ const Home = () => {
       </div>
       <About />
       <Contact />
-
-      {/* <nav className="absolute bg-transparent px-4 py-3 w-full top-3 z-20">
-        <div className="Container ms-auto flex justify-between items-center  ">
-          <div className="text-3xl hidden sm:block lg:ml-20 font-bold text-white">
-            LOGO
-          </div>
-
-          <div className="w-5/12 flex gap-52 rounded-full border bg-white text-black placeholder-gray-400 ">
-            <input
-              type="text"
-              placeholder="Search  here...."
-              className="w-full py-2 px-2 rounded-full ml-10 border-white focus:border-yellow-400 focus:outline-none"
-            />
-            <img
-              className="absolute left-2/3 pt-2 opacity-45 "
-              src="./src/images/iconamoon_search-light.png"
-            />
-          </div>
-          <button
-            className="text-black bg-white h-8 px-4 font-medium rounded-md text-barlow"
-            onClick={LoginClick}
-          >
-            LOGIN
-          </button>
-        </div>
-      </nav> */}
     </div>
   );
 };
