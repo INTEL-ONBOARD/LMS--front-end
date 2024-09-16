@@ -1,17 +1,11 @@
 import React from "react";
 import "./SignIn.css";
 import SignInImg from '../images/signin.png';
+import { useNavigate } from 'react-router-dom';
+
 
 const SignIn = () => {
-  const firstFunction = () => {
-    // Logic for the "Not registered? Create an Account" button
-    console.log("Redirecting to create account");
-  };
-
-  const secFunction = () => {
-    // Logic for the "Already registered? Login" button
-    console.log("Redirecting to login");
-  };
+  const navigate = useNavigate();
 
   return (
     <div className="container flex-wrap mx-auto flex justify-center login min-h-full px-6 py-12 lg:px-8" id="login">
@@ -59,7 +53,7 @@ const SignIn = () => {
           <div className="w-full flex justify-center max-w-sm space-y-3 flex items-center">
             <button
               type="button"
-              onClick={firstFunction}
+              onClick={() => navigate('/signup')}
               className="flex w-full justify-center rounded-lg bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm"
             >
               Not registered? Create an Account
@@ -69,8 +63,7 @@ const SignIn = () => {
           <div className="max-w-sm mt-3 space-y-3 flex items-center">
             <button
               type="submit"
-              className="flex w-full justify-center rounded-lg bg-purple-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-700"
-            >
+              className="flex w-full justify-center rounded-lg bg-purple-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-700" >
               Login
             </button>
           </div>
