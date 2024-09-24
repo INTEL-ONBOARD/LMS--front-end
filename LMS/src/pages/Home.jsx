@@ -6,7 +6,7 @@ import Contact from "./Contact";
 const Home = () => {
   const navigate = useNavigate();
   const LoginClick = () => {
-    navigate("/dashboard");
+    navigate("/signin");
   };
 
   return (
