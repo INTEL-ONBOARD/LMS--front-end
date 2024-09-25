@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import './Dashboard.css';
 import Sidebar from '../components/Sidebar';
+import Sidebar2 from '../components/Sidebar2';
 import DashboardContent from "../components/DashboardContent.jsx";
 import FaqService from "../components/FaqService"
 import Orders from "../components/Orders.jsx";
@@ -34,7 +35,8 @@ const Dashboard = () => {
     };
     return (
         <div>
-            <Sidebar setSelectedComponent={setSelectedComponent} />
+            {/*<Sidebar setSelectedComponent={setSelectedComponent} />*/}
+            <Sidebar2 setSelectedComponent={setSelectedComponent} />
             <div className="dashboard">
                 <div className="dashboard-header">
                     <div className="searchbar">
