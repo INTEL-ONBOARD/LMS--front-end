@@ -156,7 +156,7 @@ const DashboardContent = () => {
         const chart = new ApexCharts(document.getElementById("grid-chart"), graphOptions);
         chart.render();
         }
-  }, [0]);
+  }, []);
 
   return (
     <>
