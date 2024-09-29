@@ -1,49 +1,18 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   const navigate = useNavigate();
   const LoginClick = () => {
-    navigate("/dashboard");
+    navigate("/signin");
   };
 
   return (
     <div>
-      
       <div className="relative mx-auto w-full">
-        <nav className="absolute top-1 left-0 w-full bg-transparent flex items-center p-4 z-50">
-          <div className="flex-shrink-0 ml-4 sm:ml-10">
-            <h1 className="text-2xl sm:text-4xl font-bold text-white font-quantico">
-              LMS
-            </h1>
-          </div>
-
-          <div className="flex-grow flex justify-center mx-4 sm:mx-10">
-            <div className="relative w-full max-w-xs sm:max-w-xl">
-              <img
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 opacity-45 hidden sm:block"
-                src="./src/images/iconamoon_search-light.png"
-                alt="Search Icon"
-              />
-              <input
-                type="text"
-                placeholder="Search here..."
-                className="w-full pl-12 px-4 py-2 rounded-full bg-white text-gray-700 placeholder-gray-500 shadow-md"
-              />
-            </div>
-          </div>
-
-          <div className="flex-shrink-0 mr-4 sm:mr-10">
-            <button
-              className="px-4 py-2 bg-gray-300 text-purple-950 rounded-md font-quantico"
-              onClick={LoginClick}
-            >
-              Login
-            </button>
-          </div>
-        </nav>
+        <Navbar LoginClick={LoginClick} />
 
         <div className="relative w-full h-screen sm:h-screen bg-custom-gradient space-y-1">
           <img
