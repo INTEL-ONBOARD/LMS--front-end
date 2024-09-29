@@ -35,8 +35,8 @@ const Dashboard = () => {
     };
     return (
         <div>
-            {/*<Sidebar setSelectedComponent={setSelectedComponent} />*/}
-            <Sidebar2 setSelectedComponent={setSelectedComponent} />
+            <Sidebar setSelectedComponent={setSelectedComponent} />
+            {/*<Sidebar2 setSelectedComponent={setSelectedComponent} />*/}
             <div className="dashboard">
                 <div className="dashboard-header">
                     <div className="searchbar">
