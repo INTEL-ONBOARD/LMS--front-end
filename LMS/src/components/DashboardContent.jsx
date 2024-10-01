@@ -2,142 +2,137 @@ import "./DashboardContent.css";
 import React, { useEffect } from "react";
 
 {/*for pie chart */}
-const getPieChartOptions = () => ({
-  series: [52.8, 26.8, 20.4],
-  colors: ["#1C64F2", "#16BDCA", "#9061F9"],
-  chart: {
-    height: 420,
-    width: "100%",
-    type: "pie",
-  },
-  stroke: {
-    colors: ["white"],
-  },
-  plotOptions: {
-    pie: {
-      labels: {
-        show: true,
-      },
-      size: "100%",
-      dataLabels: {
-        offset: -25,
-      },
-    },
-  },
-  labels: ["Completed", "In progress", "Unassigned"],
-  dataLabels: {
-    enabled: true,
-    style: {
-      fontFamily: "Inter, sans-serif",
-    },
-  },
-  legend: {
-    position: "bottom",
-    fontFamily: "Inter, sans-serif",
-  },
-  yaxis: {
-    labels: {
-      formatter: function (value) {
-        return value + "%";
-      },
-    },
-  },
-  xaxis: {
-    labels: {
-      formatter: function (value) {
-        return value + "%";
-      },
-    },
-    axisTicks: {
-      show: false,
-    },
-    axisBorder: {
-      show: false,
-    },
-  },
-});
-
-{/*for graph chart */}
-const graphOptions = {
-    // set grid lines to improve the readability of the chart, learn more here: https://apexcharts.com/docs/grid/
-    grid: {
-      show: true,
-      strokeDashArray: 4,
-      padding: {
-        left: 2,
-        right: 2,
-        top: -26
-      },
-    },
-    series: [
-      {
-        name: "Developer Edition",
-        data: [1500, 1418, 1456, 1526, 1356, 1256],
-        color: "#1A56DB",
-      },
-      {
-        name: "Designer Edition",
-        data: [643, 413, 765, 412, 1423, 1731],
-        color: "#7E3BF2",
-      },
-    ],
+const getPieChartOptions = () => {
+  return {
+    series: [52.8, 26.8, 20.4],
+    colors: ["#1C64F2", "#16BDCA", "#9061F9"],
     chart: {
-      height: "100%",
-      maxWidth: "100%",
-      type: "area",
-      fontFamily: "Inter, sans-serif",
-      dropShadow: {
-        enabled: false,
-      },
-      toolbar: {
-        show: false,
+      height: 420,
+      width: "100%",
+      type: "pie",
+    },
+    stroke: {
+      colors: ["white"],
+    },
+    plotOptions: {
+      pie: {
+        size: "100%",
+        dataLabels: {
+          offset: -25,
+        },
       },
     },
-    tooltip: {
+    labels: ["Direct", "Organic search", "Referrals"],
+    dataLabels: {
       enabled: true,
-      x: {
-        show: false,
+      style: {
+        fontFamily: "Inter, sans-serif",
       },
     },
     legend: {
-      show: true
+      position: "bottom",
+      fontFamily: "Inter, sans-serif",
     },
-    fill: {
-      type: "gradient",
-      gradient: {
-        opacityFrom: 0.55,
-        opacityTo: 0,
-        shade: "#1C64F2",
-        gradientToColors: ["#1C64F2"],
+    yaxis: {
+      labels: {
+        formatter: function (value) {
+          return value + "%";
+        },
       },
     },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      width: 6,
-    },
     xaxis: {
-      categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
       labels: {
+        formatter: function (value) {
+          return value + "%";
+        },
+      },
+      axisTicks: {
         show: false,
       },
       axisBorder: {
         show: false,
       },
-      axisTicks: {
-        show: false,
+    },
+  };
+};
+
+{/*for graph chart */}
+const chartOptions = {
+  yaxis: {
+    show: false,
+    labels: {
+      formatter: function (value) {
+        return '€' + value;
       },
     },
-    yaxis: {
-      show: false,
-      labels: {
-        formatter: function (value) {
-          return 'Rs/-' + value;
-        }
-      }
+  },
+  chart: {
+    height: "100%",
+    maxWidth: "100%",
+    type: "area",
+    fontFamily: "Inter, sans-serif",
+    dropShadow: {
+      enabled: false,
     },
-    }
+    toolbar: {
+      show: false,
+    },
+  },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: false,
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      opacityFrom: 0.55,
+      opacityTo: 0,
+      shade: "#1C64F2",
+      gradientToColors: ["#1C64F2"],
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 6,
+  },
+  grid: {
+    show: false,
+    strokeDashArray: 4,
+    padding: {
+      left: 2,
+      right: 2,
+      top: -26,
+    },
+  },
+  series: [
+    {
+      name: "Developer Edition",
+      data: [1500, 1418, 1456, 1526, 1356, 1256],
+      color: "#1A56DB",
+    },
+    {
+      name: "Designer Edition",
+      data: [643, 413, 765, 412, 1423, 1731],
+      color: "#7E3BF2",
+    },
+  ],
+  xaxis: {
+    categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+};
 
 
 
@@ -146,16 +141,31 @@ const DashboardContent = () => {
 
     {/*for pie chart */}
   useEffect(() => {
-    if (typeof ApexCharts !== "undefined") {
-      const chart = new ApexCharts(document.getElementById("pie-chart"),getPieChartOptions()
-      );
-      chart.render();
+
+    const chartElement = document.getElementById("pie-chart");
+    let pieChart;
+    if (chartElement && typeof ApexCharts !== "undefined") {
+      pieChart = new ApexCharts(chartElement, getPieChartOptions());
+      pieChart.render();
     }
 
-    if (document.getElementById("grid-chart") && typeof ApexCharts !== 'undefined') {
-        const chart = new ApexCharts(document.getElementById("grid-chart"), graphOptions);
-        chart.render();
-        }
+    const lineChartElement = document.getElementById("grid-chart");
+    let lineChart;
+    if (lineChartElement && typeof ApexCharts !== "undefined") {
+      lineChart = new ApexCharts(lineChartElement, chartOptions);
+      lineChart.render();
+    }
+
+    // Cleanup function to destroy the chart when the component unmounts(this return must put at the bottom of the useEffect hook)
+    return () => {
+      if (pieChart) {
+        pieChart.destroy();
+      }
+      if (lineChart) {
+        lineChart.destroy();
+      }
+    };
+    
   }, []);
 
   return (
@@ -514,7 +524,7 @@ const DashboardContent = () => {
           </div>
         </div>
 
-        <div className="py-6" id="pie-chart"></div>
+        <div id="pie-chart" className="w-auto h-auto py-6"></div>
 
         <div className="grid grid-cols-1 items-center border-gray-200 border-t  justify-between">
           <div className="flex justify-between items-center pt-5">
@@ -616,7 +626,7 @@ const DashboardContent = () => {
           </svg>
         </div>
       </div>
-      <div id="grid-chart"></div>
+      <div id="grid-chart" className="w-auto h-auto"></div>
       <div className="grid grid-cols-1 items-center border-gray-200 border-t  justify-between mt-5">
         <div className="flex justify-between items-center pt-5">
           <button
