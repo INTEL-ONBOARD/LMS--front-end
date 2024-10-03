@@ -15,6 +15,7 @@
     font-size: 36px;
     font-weight: 700;
     line-height: 46.87px;
+    color: white;
 }
 
 .sidebar-header p {
@@ -23,6 +24,7 @@
     font-size: 15px;
     font-weight: 275;
     line-height: 22.5px;
+    color: white;
 }
 
 .custom-divider {
@@ -103,17 +105,21 @@
 
 .logout {
     margin-top: 20px; /* Space above the logout button */
-    width: 100%; /* Full width of the container */
+    width: 90%; /* Full width of the container */
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center the button horizontally */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logout button {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between;
-    background-color: #FFFFFF; /* White background */
-    color: #000000; /* Black text color */
-    padding: 10px 20px; /* Padding inside the button */
+    background-color: rgb(255 255 255 / 0.15);
+    color:rgb(209 213 219);
+    padding: 5px 12px; /* Padding inside the button */
     border-radius: 50px; /* Fully rounded corners */
     display: flex; /* Flexbox layout */
     align-items: center; /* Center items vertically */
@@ -123,7 +129,21 @@
     width: 254px;
 }
 
+.logout button:hover {
+    border: #5f0374;
+    border-style: solid;
+}
+
 .login-image-container img {
     width: 24px; /* Set width of the image */
     height: 24px; /* Set height of the image */
+}
+
+@media (max-width: 640px) {
+    .logout {
+        position: static;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
 }

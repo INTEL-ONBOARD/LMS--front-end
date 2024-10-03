@@ -1,8 +1,13 @@
 .dashboard {
-    margin-left: 337px;
-    padding: 40px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .dashboard {
+        margin-left: 255px;
+    }
 }
 
 .dashboard-header {
@@ -29,6 +34,7 @@
     background-color: transparent;
     padding-left:20px;
     font-family: "Poppins";
+    border-style: hidden;
 }
 
 .profile-picture-div {

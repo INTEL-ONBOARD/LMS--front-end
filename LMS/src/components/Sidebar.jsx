@@ -184,11 +184,10 @@ export const Sidebar = ({ setSelectedComponent }) => {
             <div className="logout">
                 <button>Log out
                     <span className="login-image-container">
-    <img
-        src="https://s3-alpha-sig.figma.com/img/0ef2/6e10/b8ccfa07399a26184c2effcfd859d66d?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pS-lAlLDZoFDnHq~43FCCXkIXm41d0PZxDqRkFj~dtt-bb0iJ4u1IzixiMKhFWXnTQnEvN3ERuh7PvOXt0LM7di~iafy7kKntL1n3IFRcPm04mDTnlLnAL2CzMRlOAZMm24t9-D8HQYBq3J1ngww1HwIoym-IRv-umOxMlv7rxbIvsdS7zfsSxwxg6QIQ3DJ20lPBHtkBjU17n0qx-54DN1UHx9NIZ80S7yxzzYeOFJAPieH3xak1cl-3kUpgj6ih72HTlZGB13InXXz8zPraK0xRMrakqsIHB2kt7FOVev8QM8IHz~~63M-Hx3uOnIMl40f0slmwAtf4p5qR8QYEA__"
-        alt="Icon Image"/>
-</span>
-
+                    <img
+                        src="https://s3-alpha-sig.figma.com/img/0ef2/6e10/b8ccfa07399a26184c2effcfd859d66d?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pS-lAlLDZoFDnHq~43FCCXkIXm41d0PZxDqRkFj~dtt-bb0iJ4u1IzixiMKhFWXnTQnEvN3ERuh7PvOXt0LM7di~iafy7kKntL1n3IFRcPm04mDTnlLnAL2CzMRlOAZMm24t9-D8HQYBq3J1ngww1HwIoym-IRv-umOxMlv7rxbIvsdS7zfsSxwxg6QIQ3DJ20lPBHtkBjU17n0qx-54DN1UHx9NIZ80S7yxzzYeOFJAPieH3xak1cl-3kUpgj6ih72HTlZGB13InXXz8zPraK0xRMrakqsIHB2kt7FOVev8QM8IHz~~63M-Hx3uOnIMl40f0slmwAtf4p5qR8QYEA__"
+                        alt="Icon Image"/>
+                    </span>
                 </button>
             </div>
         </div>
