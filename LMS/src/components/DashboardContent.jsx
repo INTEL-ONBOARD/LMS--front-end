@@ -312,16 +312,16 @@ const DashboardContent = () => {
         </div>
       </section>
       
-          {/*notification starts here*/}
+          {/*news starts here*/}
       <div className="border-2 border-gray-200 rounded-lg shadow m-5 p-5">
-        <h5 className="mb-4 mt-2 ml-4 text-2xl font-bold tracking-tight text-gray-900">Notifications</h5>
+        <h5 className="mb-4 mt-2 ml-4 text-2xl font-bold tracking-tight text-gray-900">Latest News</h5>
           <div className="max-w-screen-xl p-6 bg-gray-300 bg-opacity-5 border-2 border-gray-100 rounded-lg mb-5">
               <a href="#">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-700">Laundry Maintenence Notice</h5>
               </a>
               <p className="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                  Ignore
+              <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-500 rounded-lg hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  See more
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                   </svg>
@@ -332,8 +332,8 @@ const DashboardContent = () => {
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-700">Check Bulleting board</h5>
               </a>
               <p className="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                  Ignore
+              <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-500 rounded-lg hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                  See more
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                   </svg>
@@ -414,7 +414,7 @@ const DashboardContent = () => {
             <button
               id="dateRangeButton"
               data-dropdown-toggle="dateRangeDropdown"
-              data-dropdown-ignore-click-outside-className="datepicker"
+              data-dropdown-See more-click-outside-className="datepicker"
               type="button"
               className="inline-flex items-center text-blue-700  font-medium hover:underline"
             >

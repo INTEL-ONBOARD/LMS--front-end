@@ -142,7 +142,7 @@ const Reports = () => {
             colors: ["#2563eb", "#d1d5db", "#34d399", "#f97316"], // Added colors for new bars
             tooltip: {
               y: {
-                formatter: (value) => `Rs${value >= 1000 ? `${value / 1000}k` : value}`,
+                formatter: (value) => `Rs/- ${value >= 1000 ? `${value / 1000}k` : value}`,
               },
             },
           };
@@ -162,19 +162,123 @@ const Reports = () => {
 
     return (
         <>
-        <h2 className="text-xs text-indigo-500 tracking-widest mt-6 font-medium title-font text-center">REPORTS</h2>
+        <h2 className="text-xs text-indigo-500 tracking-widest mt-6 mb-10 font-medium title-font text-center">REPORTS</h2>
+
+      {/*dashboard grid starts here*/}
+      <section className="text-gray-600 body-font border-2 border-gray-200 mb-10">
+        
+        <div className="container px-5 py-2 mt-5 mx-auto">
+        <div className="flex flex-col text-center w-full mb-5">
+                    <h1 className="sm:text-3xl text-3xl font-medium title-font mb-2 text-gray-400 title-font">Status</h1>
+                    <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
+                        <button className="py-1 px-4 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white focus:outline-none">This Week</button>
+                        <button className="py-1 px-4 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white focus:outline-none">This Month</button>
+                        <button className="py-1 px-4 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white focus:outline-none">This Year</button>
+                    </div>
+                    </div>
+          <div className="flex flex-wrap -m-4 text-center">
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <div>
+                  <i className="gridline-icon fi-rr-benefit-porcent"></i>
+                </div>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  12K
+                </h2>
+                <p className="leading-relaxed">Total Sales</p>
+              </div>
+            </div>
+
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <div>
+                  <i className="gridline-icon fi fi-rr-coins"></i>
+                </div>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  217K
+                </h2>
+                <p className="leading-relaxed">Total Income</p>
+              </div>
+            </div>
+
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <i className="gridline-icon fi fi-rr-customer-care"></i>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  4
+                </h2>
+                <p className="leading-relaxed">Available Packages</p>
+              </div>
+            </div>
+
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <i className="gridline-icon fi fi-rr-customer-care"></i>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  1.3K
+                </h2>
+                <p className="leading-relaxed">Customers</p>
+              </div>
+            </div>
+
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <i className="gridline-icon fi fi-rr-employee-man"></i>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  200
+                </h2>
+                <p className="leading-relaxed">Employees</p>
+              </div>
+            </div>
+
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <i className="gridline-icon fi fi-rr-building"></i>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  7
+                </h2>
+                <p className="leading-relaxed">Branches</p>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <i className="gridline-icon fi fi-rr-order-history"></i>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  46
+                </h2>
+                <p className="leading-relaxed">Orders</p>
+              </div>
+            </div>
+
+            <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <div>
+                  <i className="gridline-icon fi fi-rr-envelope"></i>
+                </div>
+                <h2 className="title-font font-medium text-2xl text-gray-900">
+                  2.7K
+                </h2>
+                <p className="leading-relaxed">Reviews</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
         {/*package count starts here */}
         <div>
             <section className="text-gray-600 body-font overflow-hidden">
                 <div className="container px-5 py-2 mx-auto">
-                    <div className="flex flex-col text-center w-full mb-20">
+                    <div className="flex flex-col text-center w-full mb-5">
                     <h1 className="sm:text-3xl text-3xl font-medium title-font mb-2 text-gray-400 title-font">Packages</h1>
                     <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
-                        <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">All</button>
-                        <button className="py-1 px-4 focus:outline-none">Available</button>
+                        <button className="py-1 px-4 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white  focus:outline-none">All</button>
+                        <button className="py-1 px-4 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white focus:outline-none">Available</button>
+                    </div>
                     </div>
 
-                    </div>
                     <div className="flex flex-wrap -m-4">
                     <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
                         <div className="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden">
